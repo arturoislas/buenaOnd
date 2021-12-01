@@ -1,0 +1,46 @@
+body {
+    background-image: url(./../img/redesSociales/portada2.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: 'Lato', 'sans-serif';
+}
+
+h1 {
+    font-family: 'junegull';
+    text-align: center;
+    color: black;
+    padding: 2% 2% 2% 2%;
+}
+
+.artistas-container {
+    display: grid;
+    justify-content: space-around;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 100%;    
+    text-align: center;
+}
+
+h2 {
+    font-family: 'alba';
+    color: black;
+    padding: 2% 2% 2% 2%;
+}
+
+a:link {
+    color: white;
+  }
+
+#artist-melo, #artist-tury {
+    width: 60%;
+}
+
+@font-face {
+    font-family: alba;
+    src: url(/otros/tipografia/alba.TTF);
+}
+
+@font-face {
+    font-family: junegull;
+    src: url(/otros/tipografia/junegull.ttf);
+}

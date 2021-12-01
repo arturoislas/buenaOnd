@@ -1,0 +1,282 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css");
+
+
+
+body {
+    background-image: url(./../img/redesSociales/portada2.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: 'Lato', 'sans-serif';
+}
+
+.navbar {
+    display: flex;
+    text-align: center;
+}
+
+.tury-container {
+    padding-left: 5%;;
+    padding-right: 5%;
+    margin-bottom: 20%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    grid-gap: 5%;
+    grid-template-areas:
+      "img videos"
+      "about videos"
+      "discog videos";
+}
+    .discografia {
+        font-family: 'Lato', 'sans-serif';
+        grid-area: discog;  
+        background-color: rgba(0,0,0,0.3);
+        color: white;
+        font-size: 1.5rem;
+        padding: 5%; 
+        height: 100%;        
+    }
+
+    .tury-img {
+        grid-area: img;
+    }
+        .tury {
+            width: 100%;
+            max-height: 100%;
+        }
+
+    .tury-about {
+        display: grid;
+        grid-template-rows: auto auto;
+        grid-template-areas:
+            "text"
+            "links";
+        color: white;
+        background-color: rgba(0,0,0,0.3);
+        padding: 5%;
+    }
+        .bio {            
+            grid-area: text;
+        }
+            p {
+                font-family: 'Lato', sans-serif;
+                font-size: 1.5rem;
+            }
+        .social-links {
+            grid-area: links;
+            display: flex;
+            justify-content: space-around;
+        }
+            i {
+                font-size: 3em;
+                color: white;
+            }
+
+    .tury-vid {
+        grid-area: videos;
+        display: grid;
+        grid-template-rows: auto auto auto 1fr;
+        grid-template-columns: 1fr;
+        grid-row-gap: 5%;
+        grid-template-areas:
+        "video1"
+        "video2"
+        "video3"
+        "video4"
+        ;
+
+    }
+
+        .video1 {
+            grid-area: video1;
+            display: block;
+            text-align: center;
+            position: relative; 
+            padding-bottom: 56.25%; 
+            height: 0; 
+            overflow: hidden; 
+        }
+
+        .video2 {   
+            grid-area: video2;
+            display: block;
+            text-align: center;
+            position: relative; 
+            padding-bottom: 56.25%; 
+            height: 0; 
+            overflow: hidden;        
+        }
+
+        .video3 {     
+            grid-area: video3; 
+            display: block;
+            text-align: center;
+            position: relative; 
+            padding-bottom: 56.25%; 
+            height: 0; 
+            overflow: hidden;     
+    }
+
+        .video4 {     
+            grid-area: video4; 
+            display: block;
+            text-align: center;
+            position: relative; 
+            padding-bottom: 56.25%; 
+            height: 0; 
+            overflow: hidden;     
+    }
+
+        .extra-video {
+            grid-area: extra-v;
+        }
+
+    .tury-vid iframe, .tury-vid object, .tury-vid embed { 
+        position: absolute; 
+        top: 0; 
+        left: 0; 
+        width: 100%; 
+        height: 100%;
+    }
+  
+h1 {
+    font-family: 'junegull';
+    text-align: center;
+    color: white;
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+
+
+@font-face {
+    font-family: alba;
+    src: url(/otros/tipografia/alba.TTF) format("tff");
+}
+
+@font-face {
+    font-family: junegull;
+    src: url(/otros/tipografia/junegull.ttf) format("tff");
+    size-adjust: 150%;
+}
+
+
+/*------------- MEDIA QUERYS --------------*/
+
+@media (max-width: 1300px) {
+    i {
+        font-size: 2em;
+    }
+    
+    p {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 1005px) {
+    i {
+        font-size: 1.5em;
+    }
+    
+    p {
+        font-size: 1.1rem;
+    }
+}
+
+
+@media (max-width: 850px) {
+
+
+    i {
+        font-size: 2.5em;
+    }
+    
+    p {
+        font-size: 1.3rem;
+    }
+
+    .tury-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto auto;
+        grid-gap: 0%;
+        grid-row-gap: 4%;
+        grid-template-areas:
+          "videos"
+          "about"
+          "img"
+          "discog";
+    }
+        .discografia {
+            grid-area: discog;  
+            font-size: 1.5rem;
+        }
+
+        .tury-vid {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto;
+        grid-row-gap: 2%;
+        grid-template-areas:
+          "video1"
+          "video2"
+          "video3";
+    }
+        .video1 {
+            grid-area: video1;
+        }
+        .video2 {   
+            grid-area: video2;       
+        }
+        .video3 {     
+            grid-area: video3;    
+        }   
+  
+
+    .tury-img {
+        grid-row: 3/4;
+        grid-column: 1/2;
+        padding: 0%;
+    }    
+        .tury {
+            display: block;
+            object-fit: scale-down;
+            width: 100%;
+            max-height: 100%;
+        }
+
+        
+    
+    .tury-about {
+        grid-row: 2/3;
+        grid-column: 1/2;
+        color: white;
+    }
+
+}
+
+
+@media (max-width: 560px) {
+
+
+    i {
+        font-size: 2em;
+    }
+    p {
+        font-size: 1rem;
+    }
+
+}
+
+@media (max-width: 400px) {
+
+
+    i {
+        font-size: 1.5em;
+    }
+    
+    p {
+        font-size: 0.8rem;
+    }
+
+}
